@@ -1,0 +1,71 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "sourceType": "module",
+    "ecmaVersion": 11,
+    "projectFolderIgnoreList": ["**/node_modules/**", "**/dist/**"]
+  },
+  "plugins": ["@typescript-eslint", "no-loops", "unicorn", "import", "sonarjs"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
+    "plugin:sonarjs/recommended",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:eslint-comments/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": 0,
+    "@typescript-eslint/consistent-generic-constructors": [
+      1,
+      "type-annotation"
+    ],
+    "@typescript-eslint/array-type": [
+      2,
+      { "default": "array-simple", "readonly": "array-simple" }
+    ],
+    "@typescript-eslint/no-confusing-void-expression": [
+      1,
+      { "ignoreArrowShorthand": true }
+    ],
+    "@typescript-eslint/explicit-function-return-type": 1,
+    "@typescript-eslint/explicit-member-accessibility": 1,
+    "@typescript-eslint/explicit-module-boundary-types": 1,
+    "@typescript-eslint/method-signature-style": 1,
+    "@typescript-eslint/naming-convention": 2,
+    "@typescript-eslint/no-base-to-string": 1,
+    "@typescript-eslint/no-redundant-type-constituents": 1,
+    "@typescript-eslint/no-require-imports": 2,
+    "@typescript-eslint/no-useless-empty-export": 2,
+    "@typescript-eslint/member-ordering": [
+      2,
+      {
+        "default": [
+          "public-static-field",
+          "static-field",
+          "public-static-method",
+          "static-method",
+          "public-abstract-method",
+          "protected-abstract-method",
+          "private-abstract-method",
+          "public-abstract-field",
+          "protected-abstract-field",
+          "private-abstract-field",
+          "instance-field",
+          "field",
+          "signature",
+          "constructor",
+          "static-initialization",
+          "method"
+        ]
+      }
+    ]
+  }
+}
