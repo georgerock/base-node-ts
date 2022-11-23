@@ -8,8 +8,9 @@
   "scripts": {
     "watch:ts": "tsc --project tsconfig.json --watch",
     "watch:js": "nodemon",
-    "dev": "yarn concurrently \"yarn watch:ts\" \"yarn watch:js\"",
-    "build": "rimraf ./dist && tsc",
+    "watch:paths": "tsc-alias -p tsconfig.json --watch",
+    "dev": "yarn concurrently \"yarn watch:ts\" \"yarn watch:paths\" \"yarn watch:js\"",
+    "build": "rimraf ./dist && tsc && tsc-alias -p tsconfig.json",
     "start": "yarn build && node dist/index.js",
     "lint": "eslint . --ext .ts",
     "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
@@ -28,6 +29,7 @@
     "concurrently": "^7.6.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-github": "^4.4.1",
     "eslint-plugin-import": "^2.26.0",
@@ -40,6 +42,7 @@
     "nodemon": "^2.0.20",
     "prettier": "^2.8.0",
     "rimraf": "^3.0.2",
+    "tsc-alias": "^1.7.1",
     "typescript": "^4.9.3"
   }
 }
