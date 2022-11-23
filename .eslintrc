@@ -90,5 +90,21 @@
         ]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.ts"],
+      "plugins": ["jest", "jest-extended", "jest-formatting"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest/style",
+        "plugin:jest-extended/all",
+        "plugin:jest-formatting/strict"
+      ],
+      "rules": {
+        "i18n-text/no-en": 0,
+        "@typescript-eslint/no-unsafe-call": 0
+      }
+    }
+  ]
 }
