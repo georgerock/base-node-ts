@@ -33,6 +33,7 @@
   ],
   "rules": {
     "prettier/prettier": 2,
+    "filenames/match-regex": 0,
     "no-console": 0,
     "@typescript-eslint/consistent-generic-constructors": [
       1,
