@@ -11,7 +11,7 @@
     "watch:paths": "tsc-alias -p tsconfig.json --watch",
     "dev": "yarn concurrently \"yarn watch:ts\" \"yarn watch:paths\" \"yarn watch:js\"",
     "build": "rimraf ./dist && tsc && tsc-alias -p tsconfig.json",
-    "start": "yarn build && node dist/index.js",
+    "start": "yarn build && node --enable-source-maps dist/index.js",
     "lint": "eslint . --ext .ts",
     "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prepare": "husky install"
