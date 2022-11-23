@@ -20,7 +20,6 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "no-loops",
     "unicorn",
     "import",
     "sonarjs",
@@ -34,12 +33,12 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/strict",
     "plugin:sonarjs/recommended",
+    "plugin:import/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:import/typescript",
     "prettier",
     "plugin:github/recommended",
     "plugin:github/typescript",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
     "plugin:eslint-comments/recommended"
   ],
   "rules": {
@@ -94,8 +93,16 @@
   "overrides": [
     {
       "files": ["*.test.ts"],
-      "plugins": ["jest", "jest-extended", "jest-formatting"],
+      "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "jest-extended",
+        "jest-formatting"
+      ],
       "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "eslint:recommended",
         "plugin:jest/recommended",
         "plugin:jest/style",
         "plugin:jest-extended/all",

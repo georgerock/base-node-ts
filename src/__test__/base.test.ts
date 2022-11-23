@@ -1,7 +1,9 @@
 describe('Generic test', () => {
   describe('Given a value', () => {
     it('should pass all the tests', () => {
-      expect([1, 2, 3]).toBeArrayOfSize(3);
+      const a = [1, 2, 3];
+
+      expect(a).toBeArrayOfSize(3);
     });
   });
 });
