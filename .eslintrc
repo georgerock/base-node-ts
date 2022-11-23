@@ -13,7 +13,8 @@
     "unicorn",
     "import",
     "sonarjs",
-    "prettier"
+    "prettier",
+    "github"
   ],
   "extends": [
     "eslint:recommended",
@@ -23,6 +24,8 @@
     "plugin:@typescript-eslint/strict",
     "plugin:sonarjs/recommended",
     "prettier",
+    "plugin:github/recommended",
+    "plugin:github/typescript",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
@@ -30,6 +33,7 @@
   ],
   "rules": {
     "prettier/prettier": 2,
+    "no-console": 0,
     "@typescript-eslint/consistent-generic-constructors": [
       1,
       "type-annotation"
