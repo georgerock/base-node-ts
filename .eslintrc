@@ -7,7 +7,14 @@
     "ecmaVersion": 11,
     "projectFolderIgnoreList": ["**/node_modules/**", "**/dist/**"]
   },
-  "plugins": ["@typescript-eslint", "no-loops", "unicorn", "import", "sonarjs"],
+  "plugins": [
+    "@typescript-eslint",
+    "no-loops",
+    "unicorn",
+    "import",
+    "sonarjs",
+    "prettier"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -22,7 +29,7 @@
     "plugin:eslint-comments/recommended"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": 0,
+    "prettier/prettier": 2,
     "@typescript-eslint/consistent-generic-constructors": [
       1,
       "type-annotation"
